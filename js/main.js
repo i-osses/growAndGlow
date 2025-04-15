@@ -12,6 +12,31 @@ const newBtn = document.getElementById('newBtn');
 const darkToggle = document.getElementById('darkToggle');
 const historySection = document.getElementById('history-section');
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("partials/header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      const darkToggle = document.getElementById("darkToggle");
+      if (darkToggle) {
+        darkToggle.addEventListener("click", toggleTheme);
+      }
+
+      loadTheme();
+    });
+
+  fetch("partials/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+
+  loadInspiration();
+});
+
+
 async function loadInspiration() {
   const quoteData = await getQuote();
   quoteEl.textContent = `"${quoteData.content}"`;
@@ -56,8 +81,8 @@ function displayHistory() {
 }
 
 newBtn.addEventListener('click', loadInspiration);
-darkToggle.addEventListener('click', toggleTheme);
+// darkToggle.addEventListener('click', toggleTheme);
 
-// Initial Load
-loadTheme();
-loadInspiration();
+// // Initial Load
+// loadTheme();
+// loadInspiration();
