@@ -28,7 +28,6 @@ async function loadInspiration() {
     quote: quoteData.content,
     author: quoteData.author,
     challenge: challenge,
-    gifUrl: gifUrl,
     date: new Date().toLocaleString()
   };
   storageModule.saveToHistory(entry);
@@ -48,7 +47,6 @@ function displayHistory() {
     item.innerHTML = `
       <p><strong>Quote:</strong> "${entry.quote}" - ${entry.author}</p>
       <p><strong>Challenge:</strong> ${entry.challenge}</p>
-      <img src="${entry.gifUrl}" alt="GIF" width="200">
       <p><em>${entry.date}</em></p>
       <hr>
     `;
