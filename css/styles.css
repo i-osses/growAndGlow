@@ -5,6 +5,11 @@
   --text-light: #333;
   --bg-dark: #1c1c1c;
   --text-dark: #eee;
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -14,6 +19,7 @@ body {
   background-color: var(--bg-light);
   color: var(--text-light);
   transition: background-color 0.3s, color 0.3s;
+  line-height: 1.6;
 }
 
 .dark {
@@ -25,32 +31,67 @@ header,
 footer {
   background: var(--primary);
   color: white;
-  padding: 1em;
+  padding: 1.5em;
   text-align: center;
+  box-shadow: 0 4px 6px var(--shadow);
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 button {
   background-color: var(--accent);
   border: none;
   color: white;
-  padding: 0.5em 1em;
+  padding: 0.7em 1.5em;
   font-size: 1.1em;
   margin: 1em auto;
   display: block;
   cursor: pointer;
   border-radius: 10px;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px var(--shadow);
 }
 
 button:hover {
   transform: scale(1.05);
+  background-color: #e68900;
+  box-shadow: 0 6px 8px var(--shadow);
+}
+
+section {
+  width: 100%;
+  padding: 1.5em;
+  text-align: center;
+  margin-bottom: 2em;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px var(--shadow);
+}
+
+.dark section {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2); /* Adjust shadow for dark mode */
 }
 
 #quoteSection,
 #challengeSection,
 #gifSection {
-  padding: 1em;
-  text-align: center;
+  margin-bottom: 2em;
 }
 
 img {
@@ -58,4 +99,43 @@ img {
   max-width: 300px;
   border-radius: 10px;
   margin-top: 1em;
+  object-fit: cover;
+}
+
+/* Responsive Tweaks */
+@media (min-width: 600px) {
+  section {
+    padding: 2em;
+    margin-bottom: 2.5em;
+  }
+
+  button {
+    font-size: 1.2em;
+  }
+
+  img {
+    width: 60%;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em;
+  }
+
+  #quoteSection,
+  #challengeSection,
+  #gifSection {
+    width: 30%;
+    margin-bottom: 0;
+    max-width: 350px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 150px;
+  }
 }
