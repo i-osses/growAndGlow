@@ -23,6 +23,10 @@ Grow & Glow is a motivational web app designed to inspire personal growth and fi
 2. Uses keywords from the quote to search for a related GIF via Giphy API
 3. Randomly selects and displays a habit tip or challenge
 
+## Trello
+
+[https://trello.com/b/KAmvGvQZ/grow-glow-self-improvement-and-wealth-mindset-app] (https://trello.com/invite/b/67ff51767a6b0b88101b28e0/ATTI1bbba25d585b0a36b744d15393f8109cE79BE45E/grow-glow-self-improvement-and-wealth-mindset-app)
+
 ## Live Demo
 
 Check it out here: [https://growglow.netlify.app/](https://growglow.netlify.app/)  
