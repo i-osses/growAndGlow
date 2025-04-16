@@ -25,8 +25,7 @@ Grow & Glow is a motivational web app designed to inspire personal growth and fi
 
 ## Live Demo
 
-Check it out here: [https://yourusername.netlify.app](https://yourusername.netlify.app)  
-*(Update with your actual Netlify link)*
+Check it out here: [https://growglow.netlify.app/](https://growglow.netlify.app/)  
 
 ## Requirements
 
@@ -51,8 +50,8 @@ This project was built to meet the course requirements:
 
 ## 📬 Contact
 
-Created by **Ignacio “Oz” Osses**  
-📧 [YourEmail@example.com]  
+Created by **Ignacio Osses**  
+📧 [ignacio.osses@gmail.com]  
 🔗 [LinkedIn](https://www.linkedin.com/in/ignacio-osses-dev/)
 🔗 [Github](https://github.com/i-osses/)
 
